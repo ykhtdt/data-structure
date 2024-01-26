@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "start": "ts-node index.ts",
-    "stack": "ts-node stack.example.ts"
+    "stack": "ts-node Stack.example.ts",
+    "linked-list": "ts-node LinkedList.example.ts"
   },
   "devDependencies": {
     "ts-node": "^10.9.2",
