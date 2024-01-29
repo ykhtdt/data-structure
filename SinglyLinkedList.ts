@@ -1,11 +1,9 @@
-// Singly Linked List 구현
-
 // 노드를 저장할 때 그 다음 순서의 자료가 있는 위치와 데이터를 갖는 방식으로 저장한다.
-class LinkedListNode<Element = any> {
+class SinglyLinkedListNode<Element = any> {
   // 데이터를 담는 Data Field
   data: Element;
   // 다음 노드를 기리키는 Linked Field
-  next: LinkedListNode<Element> | null;
+  next: SinglyLinkedListNode<Element> | null;
 
   constructor(data: Element) {
     this.data = data;
@@ -14,11 +12,11 @@ class LinkedListNode<Element = any> {
   }
 }
 
-class LinkedList<Element = any> {
+class SinglyLinkedList<Element = any> {
   // LinkedList의 가장 첫 지점
-  head: LinkedListNode<Element> | null = null;
+  head: SinglyLinkedListNode<Element> | null = null;
   // LinkedList의 가장 마지막 지점
-  tail: LinkedListNode<Element> | null = null;
+  tail: SinglyLinkedListNode<Element> | null = null;
   size: number = 0;
 
   getNode(index: number) {
@@ -37,7 +35,7 @@ class LinkedList<Element = any> {
   }
 
   insert(data: Element, index?: number) {
-    const node = new LinkedListNode(data);
+    const node = new SinglyLinkedListNode(data);
     
     if (typeof index === 'undefined') {
     // 1. index가 없으면 마지막 노드 뒤에 추가한다.
@@ -118,6 +116,24 @@ class LinkedList<Element = any> {
     }
   }
 
+  isEmpty() {
+    return this.head === null;
+  }
+
+  getSize() {
+    let current = this.head;
+    let count = 0;
+
+    while (current) {
+      count++;
+      current = current.next;
+    }
+
+    return count;
+
+    // return this.size;
+  }
+
   print() {
     let str = '[';
     let current = this.head;
@@ -134,4 +150,4 @@ class LinkedList<Element = any> {
 
 }
 
-export default LinkedList;
+export default SinglyLinkedList;
