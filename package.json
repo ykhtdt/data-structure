@@ -4,7 +4,7 @@
   "scripts": {
     "start": "ts-node index.ts",
     "stack": "ts-node Stack.example.ts",
-    "linked-list": "ts-node LinkedList.example.ts"
+    "linked-list": "ts-node SinglyLinkedList.example.ts"
   },
   "devDependencies": {
     "ts-node": "^10.9.2",
