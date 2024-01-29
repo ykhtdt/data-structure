@@ -7,7 +7,7 @@ class SinglyLinkedListNode<Element = any> {
 
   constructor(data: Element) {
     this.data = data;
-    // LinkedList의 마지막 지점은 null이다.
+    // LinkedList의 마지막 지점의 다음은 null이다.
     this.next = null;
   }
 }
