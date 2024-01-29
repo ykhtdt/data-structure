@@ -28,7 +28,7 @@ class SinglyLinkedList<Element = any> {
 
     while (index > 0) {
       current = current!.next;
-        index--;
+      index--;
     }
 
     return current;
